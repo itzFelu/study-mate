@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        /* body { */
+        /* background: #67B26F;  fallback for old browsers */
+        /* background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  Chrome 10-25, Safari 5.1-6 */
+        /* background: linear-gradient(to right, #4ca2cd, #67B26F); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        /* padding: 0; */
+        /* margin: 0; */
+        /* font-family: 'Lato', sans-serif; */
+        /* color: #000; */
+        /* } */
+        .student-profile .card {
+            border-radius: 10px;
+        }
+
+        .student-profile .card .card-header .profile_img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px auto;
+            border: 10px solid #ccc;
+            border-radius: 50%;
+        }
+
+        .student-profile .card p {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .student-profile .table th,
+        .student-profile .table td {
+            font-size: 14px;
+            padding: 5px 10px;
+            color: #000;
+        }
+
+        .card-body {
+            margin-top: 20px;
+            width: 500px;
+        }
+
+        textarea {
+            padding: 10px;
+        }
+
+        #ip-sub {
+            padding: 5px 10px 5px 10px;
+        }
+
+        #ip-sub:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-items logo">
+            <img src="./images/mckvie_logo.png" alt="mckvie">
+        </div>
+        <div class="header-items heading">
+            <h1>STUDY-MATE</h1> <br>
+            <!-- <p>Lorem ipsum dolor sit ame</p> -->
+        </div>
+        <div class="header-items third">
+            <div>
+                <p>welcome USER</p>
+            </div>
+            <div class="chat">
+                <a href="/collegeConnect">collegeConnect</a>
+            </div>
+            <div class="top">
+                <div class="top-items dashboard"><button>dashboard</button></div>
+                <div class="top-items log"><button>logout</button></div>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <hr>
+    <br>
+    <!-- <h1><u>Mentor</u></h1> -->
+    <div class="student-profile py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-transparent text-center">
+                            <img class="profile_img" src="https://source.unsplash.com/600x300/?student"
+                                alt="student dp">
+                            <h3>Subir Bhadra</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0"><strong class="pr-1">Mentor Name:</strong>Subir Bhadra</p>
+                            <p class="mb-0"><strong class="pr-1">Email:</strong>abc@mckvie.com</p>
+                            <p class="mb-0"><strong class="pr-1">Mobile:</strong>9013892399</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Send Your Query to your MENTOR</h3>
+                        </div>
+                        <!-- <div class="card-body pt-0">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th width="30%">Name</th>
+                                    <td width="2%">:</td>
+                                    <td>Sukanta Roy</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">University Roll</th>
+                                    <td width="2%">:</td>
+                                    <td>11600220057</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">University Registration Number</th>
+                                    <td width="2%">:</td>
+                                    <td>201160100110007</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">Year of Registration</th>
+                                    <td width="2%">:</td>
+                                    <td>2020-2021</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">Gender</th>
+                                    <td width="2%">:</td>
+                                    <td>Male</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">Current Semester</th>
+                                    <td width="2%">:</td>
+                                    <td>8th</td>
+                                </tr>
+                            </table>
+                        </div> -->
+                    </div>
+                    <div style="height: 26px"></div>
+                    <div class="card shadow-sm">
+                        <!-- <div class="card-header bg-transparent border-0">
+                            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Other Information</h3>
+                        </div> -->
+                        <div class="card-body pt-0">
+                            <form id="fs-frm form-el" name="complaint-form" accept-charset="utf-8" action="#"
+                                method="post">
+                                <textarea name="" id="txt-el" cols="80" rows="10" placeholder="write here"></textarea>
+                                <br>
+                                <input id="ip-sub" type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="heading">
+            <h2>STUDY-MATE by MCKV<sup>™</sup></h2>
+        </div>
+        <hr>
+        <footer>
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>Contact: info@mckvie.edu.in</p>
+                <p>Phone: (+91) 3326549315 / 17</p>
+            </div>
+            <div class="admission-details">
+                <h3>Admission Details</h3>
+
+                <p>Admission Office: MCKV INSTITUTE OF ENGINEERING 243 G. T. ROAD(NORTH), LILUAH, HOWRAH - 7712204</p>
+                <p>Email: admission@mckvie.edu.in</p>
+                <p>Phone: 9007017339</p>
+            </div>
+            <br>
+            © 2023 MCKVIE, All rights reserved.
+        </footer>
+    </div>
+
+</body>
+<script>
+    //header events script
+    document.querySelector('.dashboard')
+        .addEventListener('click', () => {
+            window.location.href = "/dashboard";
+        })
+    document.querySelector('.log')
+        .addEventListener('click', () => {
+            window.location.href = "/login";
+        })
+</script>
+
+</html>

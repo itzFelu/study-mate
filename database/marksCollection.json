@@ -1,0 +1,119 @@
+[
+    {
+        "uniRoll": 11600220057,
+        "semester": 7,
+        "subCount": 4,
+        "subjects": [
+            {
+                "subjectCode": "PC-CS601",
+                "name": "Compiler Design",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            },
+            {
+                "subjectCode": "PC-CS602",
+                "name": "computer networks",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            },
+            {
+                "subjectCode": "PC-CS603",
+                "name": "Database Management System",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            },
+            {
+                "subjectCode": "PC-CS604",
+                "name": "Software Engineering",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            }
+        ]
+    },
+    {
+        "uniRoll": 11600220050,
+        "semester": 7,
+        "subCount": 4,
+        "subjects": [
+            {
+                "subjectCode": "PC-CS601",
+                "name": "Compiler Design",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            },
+            {
+                "subjectCode": "PC-CS602",
+                "name": "computer networks",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            },
+            {
+                "subjectCode": "PC-CS603",
+                "name": "Database Management System",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            },
+            {
+                "subjectCode": "PC-CS604",
+                "name": "Software Engineering",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            }
+        ]
+    },
+    {
+        "uniRoll": 11600220063,
+        "semester": 7,
+        "subCount": 4,
+        "subjects": [
+            {
+                "subjectCode": "PC-CS601",
+                "name": "Compiler Design",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            },
+            {
+                "subjectCode": "PC-CS602",
+                "name": "computer networks",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            },
+            {
+                "subjectCode": "PC-CS603",
+                "name": "Database Management System",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            },
+            {
+                "subjectCode": "PC-CS604",
+                "name": "Software Engineering",
+                "ca1": 20,
+                "ca2": 25,
+                "ca3": 20,
+                "ca4": 23
+            }
+        ]
+    }
+]

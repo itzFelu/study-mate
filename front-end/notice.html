@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notices</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        /********** News, Event, Notice Board CSS Starts **********/
+        .event {
+            width: 50%;
+            margin-right: 1%;
+            /* float: left; */
+            margin: auto;
+        }
+
+        .event div {
+            padding: 10px;
+            background-color: #f0f3fa;
+        }
+
+        .event ul li {
+            list-style: none;
+            margin-bottom: 20px;
+            width: 100%;
+            float: left;
+            text-decoration: underline;
+        }
+        .event ul li:hover{
+            cursor: pointer;
+            color: red;
+        }
+        .event img{
+            width: 18px;
+            height:18px;
+            object-fit: cover;
+        }
+
+
+        /********** News, Event, Notice Board CSS Ends **********/
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-items logo">
+            <img src="./images/mckvie_logo.png" alt="mckvie">
+        </div>
+        <div class="header-items heading">
+            <h1>STUDY-MATE</h1> <br>
+            <!-- <p>Lorem ipsum dolor sit ame</p> -->
+        </div>
+        <div class="header-items third">
+            <div>
+                <p>welcome USER</p>
+            </div>
+            <div class="chat">
+                <a href="/collegeConnect">collegeConnect</a>
+            </div>
+            <div class="top">
+                <div class="top-items dashboard"><button>dashboard</button></div>
+                <div class="top-items log"><button>logout</button></div>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <hr>
+    <br>
+    <!---------- News, Event, Notice Board HTML Starts --------->
+<div class="container">
+    <div class="main-section">
+        <!---------- News Section --------->
+        <!-- <div class="event">
+          <h2 class="heading">Campus News</h2>
+          <div>
+             <marquee direction="up" scrollamount="7" style="height:400px;">
+                <ul>
+                   <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                   <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including versions Lorem Ipsum</li>
+                   <li><img src="images/new.gif"> Many desktop publishing packages and web page editors now use</li>
+                   <li><img src="images/new.gif"> Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</li>
+                   <li><img src="images/new.gif"> Welcome To The Best Private University in MP</li>
+                   <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                   <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including versions of Ipsum</li>
+                </ul>
+             </marquee>
+          </div>
+       </div> -->
+        <!---------- Event Section --------->
+        <!-- <div class="event">
+          <h2 class="heading">Events</h2>
+          <div>
+             <marquee direction="up" scrollamount="7" style="height:400px;">
+                <ul>
+                   <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                   <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including versions Lorem Ipsum</li>
+                   <li><img src="images/new.gif"> Many desktop publishing packages and web page editors now use</li>
+                   <li><img src="images/new.gif"> Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</li>
+                   <li><img src="images/new.gif"> Welcome To The Best Private University in MP</li>
+                   <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                   <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including versions of Ipsum</li>
+                </ul>
+             </marquee>
+          </div>
+       </div> -->
+        <!---------- Notice Board Section --------->
+        <div class="event">
+            <h2 class="heading">Notice Boards</h2>
+            <div>
+                <marquee direction="up" scrollamount="7" style="height:400px;">
+                    <ul>
+                        <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.</li>
+                        <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including of
+                            Lorem Ipsum</li>
+                        <li><img src="images/new.gif"> Many desktop publishing packages and web page editors now use
+                        </li>
+                        <li><img src="images/new.gif"> Various versions have evolved over the years, sometimes by
+                            accident, sometimes on purpose (injected humour and the like).</li>
+                        <li><img src="images/new.gif"> Welcome To The Best Private University in MP</li>
+                        <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.</li>
+                        <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including
+                            versions of Ipsum</li>
+                    </ul>
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <!---------- News, Event, Notice Board HTML Ends --------->
+
+    <div class="footer">
+        <div class="heading">
+            <h2>STUDY-MATE by MCKV<sup>™</sup></h2>
+        </div>
+
+        <footer>
+            <hr>
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>Contact: info@mckvie.edu.in</p>
+                <p>Phone: (+91) 3326549315 / 17</p>
+            </div>
+            <div class="admission-details">
+                <h3>Admission Details</h3>
+
+                <p>Admission Office: MCKV INSTITUTE OF ENGINEERING 243 G. T. ROAD(NORTH), LILUAH, HOWRAH - 7712204</p>
+                <p>Email: admission@mckvie.edu.in</p>
+                <p>Phone: 9007017339</p>
+            </div>
+            <br>
+            © 2023 MCKVIE, All rights reserved.
+        </footer>
+    </div>
+</body>
+<script>
+    //header events script
+    document.querySelector('.dashboard')
+        .addEventListener('click',()=>{
+            window.location.href="/dashboard";
+        })
+    document.querySelector('.log')
+        .addEventListener('click',()=>{
+            window.location.href="/login";
+        })
+</script>
+</html>

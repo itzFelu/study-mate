@@ -1,0 +1,210 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: right;
+}
+
+/* Style for the search bar */
+
+
+/* Hover effect for buttons */
+.user-actions button:hover,
+.search-bar button:hover {
+    background-color: #0056b3;
+    /* Set your desired hover color */
+}
+
+/* Style for the navigation container */
+.nav_container {
+    background-color: #333;
+    /* Set your desired background color */
+    padding: 10px;
+    /* Adjust padding as needed */
+}
+
+/* Style for the navigation bar */
+#nav_bar {
+    list-style-type: none;
+    /* Remove bullet points from the list */
+}
+
+#nav_bar a {
+    text-decoration: none;
+    /* Remove underlines from links */
+    color: white;
+    /* Set the text color */
+    padding: 10px 15px;
+    /* Adjust padding as needed */
+    display: inline-block;
+    /* Display links in a row */
+    position: relative;
+}
+
+#nav_bar a:after {
+    content: '';
+    /* Create an empty content for the pseudo-element */
+    display: block;
+    height: 2px;
+    /* Set the thickness of the underline */
+    background-color: gray;
+    /* Set the color of the underline */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    /* Initially, the width is 0 */
+    transition: width 0.3s;
+    /* Add a smooth transition effect */
+}
+
+#nav_bar a:hover:after {
+    width: 100%;
+    /* Expand the underline to 100% on hover */
+}
+
+
+#title {
+    padding: 20px;
+    /* border-top: 0px; */
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 3px;
+    border-color: red;
+    border-style: solid;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    
+}
+
+/* sliding gallery */
+.gallery-container {
+    position: relative;
+    max-width: 100%;
+    /*previously 800px*/
+    /* max-height: auto; */
+    margin: auto;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.5s ease-in-out;
+    width: 400px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.gal_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: black;
+}
+
+.gal_button:hover {
+    border: gainsboro;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: gainsboro;
+    padding: 3px;
+
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* .gallery{
+    width: 500px;
+} */
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 98%;
+    /*(previously:100%)*/
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-style: outset;
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+    background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    /* background-color: #f1f1f1; */
+}
+
+.collapsible:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 10px;
+    color: black;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.content_mv {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+footer {
+    /* position:fixed; */
+    padding: 20px;
+    left: 0px;
+    bottom: 0px;
+    height: auto;
+    width: 100%;
+    background: #999;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study-Mate</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <!-- <div class="top">
+        <div class="top-items dashboard"><button>dashboard</button></div>
+        <div class="top-items log"><button>logout</button></div>
+    </div> -->
+
+    <header>
+        <div class="header-items logo">
+            <img src="./images/mckvie_logo.png" alt="mckvie">
+        </div>
+        <div class="header-items heading">
+            <h1>STUDY-MATE</h1> <br>
+            <!-- <p>Lorem ipsum dolor sit ame</p> -->
+        </div>
+        <div class="header-items third">
+            <div>
+                <p>welcome USER</p>
+            </div>
+            <div class="chat">
+                <a href="/collegeConnect">collegeConnect</a>
+            </div>
+            <div class="top">
+                <div class="top-items dashboard"><button>dashboard</button></div>
+                <div class="top-items log"><button>logout</button></div>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <hr>
+    <br>
+    <div class="main">
+        <div class="cards" id="notice">
+            <img src="./images/sections.png" alt="img">
+            <p>Notice</p>
+        </div>
+
+        <div class="cards" id="uniDetails">
+            <img src="./images/sections.png" alt="img">
+            <p>University Details</p>
+        </div>
+
+        <div class="cards" id="marks">
+            <img src="../../images/sections.png" alt="img">
+            <p>Marks</p>
+        </div>
+
+        <div class="cards" id="classroom">
+            <img src="../../images/sections.png" alt="img">
+            <p>Classroom</p>
+        </div>
+
+        <div class="cards" id="mentor">
+            <img src="../../images/sections.png" alt="">
+            <p>Mentor</p>
+        </div>
+
+        <div class="cards" id="eBook">
+            <img src="../../images/sections.png" alt="">
+            <p>E-Book Center</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="heading">
+            <h2>STUDY-MATE by MCKV<sup>™</sup></h2>
+        </div>
+
+        <footer>
+            <hr>
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>Contact: info@mckvie.edu.in</p>
+                <p>Phone: (+91) 3326549315 / 17</p>
+            </div>
+            <div class="admission-details">
+                <h3>Admission Details</h3>
+
+                <p>Admission Office: MCKV INSTITUTE OF ENGINEERING 243 G. T. ROAD(NORTH), LILUAH, HOWRAH - 7712204</p>
+                <p>Email: admission@mckvie.edu.in</p>
+                <p>Phone: 9007017339</p>
+            </div>
+            <br>
+            © 2023 MCKVIE, All rights reserved.
+        </footer>
+    </div>
+</body>
+<script>
+    document.querySelector('#notice')
+        .addEventListener('click',()=>{
+            window.location.href = "/notice";
+        })
+    document.querySelector('#uniDetails')
+        .addEventListener('click',()=>{
+            window.location.href = "/uniDetails";
+        })
+    document.querySelector('#marks')
+        .addEventListener('click',()=>{
+            window.location.href = "/marks";
+        })
+    document.querySelector('#notice')
+        .addEventListener('click',()=>{
+            window.location.href = "/notice";
+        })
+    document.querySelector('#classroom')
+            .addEventListener('click',()=>{
+                window.location.href = "/classroom";
+            })
+    document.querySelector('#mentor')
+            .addEventListener('click',()=>{
+                window.location.href = "/mentor";
+            })
+    document.querySelector('#eBook')
+        .addEventListener('click',()=>{
+            window.location.href = "/eBook";
+        })
+    
+    // header onclick events script
+    document.querySelector('.logo')
+        .addEventListener('click',()=>{
+            window.open('/', '_blank');
+        })
+    document.querySelector('.dashboard')
+        .addEventListener('click',()=>{
+            window.location.href="/dashboard";
+        })
+    document.querySelector('.log')
+        .addEventListener('click',()=>{
+            window.location.href="/login";
+        })
+    
+    
+       
+</script>
+
+</html>
