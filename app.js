@@ -29,6 +29,6 @@ app.get('/eBook',(req,res)=>{
 app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname, '/front-end/workInProgress.html'))
 })
-app.listen(4590,()=>{
+app.listen(process.env.PORT || 4590,()=>{
     console.log('server is listening to port 4590\nopen localhost:4590 in the web browser')
 })
