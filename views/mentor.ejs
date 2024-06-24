@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor:Study Mate</title>
+    <%- include("./partials/dashboardStyle") %>
+        <%- include("./partials/head") %>
+            <%- include("./partials/mentorStyle") %>
+
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+    <h3 class="ms-5" id="titleMentor" 
+    onMouseOver="this.style.cursor='pointer'"
+    onMouseOut="this.style.cursor='arrow'"
+    ><u>Mentor Section</u></h3>
+
+    <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid justify-content-end">
+            <button class="btn btn-outline-success me-2" id="sendQuery" type="button">Send Query</button>
+            <button class="btn btn-outline-success me-2" id="mentorNotice" type="button">MentorNotice</button>
+        </div>
+    </nav>
+
+    <% if (locals.error) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+    <% if (locals.message) { %>
+        <div class="alert alert-success" role="alert">
+            <%= message%>
+        </div>
+    <% } %>
+    <% if (locals.mentor && mentor.err) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= mentor.err %>
+            </div>
+    <% } %>
+    <div class="student-profile py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-transparent text-center">
+                            <img class="profile_img" src=<%=mentor.profileImageUrl %>
+                            alt="student dp">
+                            <h3>
+                                <%= mentor.name %>
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0"><strong class="pr-1">Mentor Name:</strong>
+                                <%= mentor.name %>
+                            </p>
+                            <p class="mb-0"><strong class="pr-1">Email:</strong>
+                                <%= mentor.email %>
+                            </p>
+                            <!-- <p class="mb-0"><strong class="pr-1">Mobile:</strong>9013892399</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Send Your Query to your MENTOR</h3>
+                        </div>
+
+                    </div>
+                    <div style="height: 26px"></div>
+                    <div class="card shadow-sm">
+                        <div class="card-body pt-0">
+                            <form class="form-group" id="fs-frm form-el" name="complaint-form"
+                                accept-charset="utf-8" action="/user/mentorQuery" method="post">
+                                <textarea class="form-control" name="query" id="txt-el" cols="80" rows="10"
+                                    placeholder="write here" required></textarea>
+                                <br>
+                                <input class="btn btn-primary" id="ip-sub" type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <%- include("./partials/footer") %>
+
+</body>
+<%- include("./partials/dashboardScript") %>
+<script>
+    document.querySelector("#titleMentor")
+        .addEventListener('click',()=>{
+            window.location.href='/user/mentor';
+        })
+    document.querySelector("#mentorNotice")
+        .addEventListener('click',()=>{
+            window.location.href='/user/mentor/mentorNoticeStudent';
+        })
+    document.querySelector("#sendQuery")
+        .addEventListener('click',()=>{
+            window.location.href='/user/mentor';
+        })
+    
+</script>
+</html>

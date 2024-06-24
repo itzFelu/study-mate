@@ -1,0 +1,26 @@
+<header>
+    <div class="header-items logo">
+        <img src="/images/mckvie_logo.png" alt="mckvie">
+    </div>
+    <div class="header-items heading">
+        <h1 id="home">STUDY-MATE</h1> <br>
+        <!-- <p>Lorem ipsum dolor sit ame</p> -->
+    </div>
+    <div class="header-items third">
+        <div>
+            <% if(locals.user) { %>
+                <p>welcome <%= user.name %></p>
+            <% } %>
+        </div>
+        <div class="chat">
+            <a href="/collegeConnect" target="_blank">collegeConnect</a>
+        </div>
+        <div class="top">
+            <div class="top-items dashboard"><button id="dashboardHref">dashboard</button></div>
+            <div class="top-items log"><button id="logout">logout</button></div>
+        </div>
+    </div>
+</header>
+<hr>
+<hr>
+<br>

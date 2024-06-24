@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin: UpdateUniDetails</title>
+  <%- include('./partials/head') %>
+  <%- include("./partials/dashboardStyle") %>
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <%- include('./partials/adminHeader') %>
+  <h1 class="m-5">Enroll/Update University Details </h1>
+  <% if (locals.error) { %>
+    <div class="alert alert-danger" role="alert">
+        <%= error %>
+    </div>
+<% } %>
+<% if (locals.message) { %>
+    <div class="alert alert-success" role="alert">
+        <%= message%>
+    </div>
+<% } %>
+  <form class="m-5" action="/admin/UpdateUniDetails" method="post">
+    <div class="mb-3" >
+      <label for="collegeId" class="form-label">College Id</label>
+      <input type="text" class="form-control" id="collegeId" name="collegeId" required>
+    </div>
+    <div class="mb-3">
+        <label for="role" class="form-label">Gender</label>
+        <div class="" >
+          <input class="form-check-input" type="radio" name="gender" id="male" value="male"  required>
+          <label class="form-check-label mr-2" for="male">Male</label>
+          <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+          <label class="form-check-label mr-2" for="female">Female</label>
+          <input class="form-check-input" type="radio" name="gender" id="others" value="others">
+          <label class="form-check-label" for="others">Others</label>
+        </div>
+      </div>
+    <div class="mb-3" >
+      <label for="uniRoll" class="form-label">University Roll</label>
+      <input type="number" class="form-control" id="uniRoll" name="uniRoll" required>
+    </div>
+    <div class="mb-3" >
+      <label for="uniReg" class="form-label">University Registration</label>
+      <input type="number" class="form-control" id="uniReg" name="uniReg" required>
+    </div>
+    <div class="mb-3" >
+      <label for="yearOfReg" class="form-label">Year of Registration</label>
+      <input type="text" class="form-control" id="yearOfReg" name="yearOfReg" required>
+    </div>
+    <div class="mb-3" >
+      <label for="batch" class="form-label">Batch</label>
+      <input type="text" class="form-control" id="batch" name="batch" required>
+    </div>
+    <div class="mb-3" >
+      <label for="currSemester" class="form-label">Current Semester</label>
+      <input type="number" class="form-control" id="currSemester" name="currSemester" required>
+    </div>
+    <div class="mb-3" >
+      <label for="mentorId" class="form-label">Mentor Teacher Id</label>
+      <input type="text" class="form-control" id="mentorId" name="mentorId" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <%- include("./partials/footer") %>
+</body>
+<%- include('./partials/adminScript') %>
+<%- include('./partials/script') %>
+
+</html>

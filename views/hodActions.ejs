@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HodActions: Study-Mate</title>
+    <%- include("./partials/dashboardStyle") %>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+    
+    <div class="main">
+        <div class="cards" id="subjectAssignment" onclick="location.href='/user/hodActions/subjectAssignment'">
+            <img src="/images/sections.png" alt="">
+            <p>Subject Assignment</p>
+        </div>
+    </div>
+    
+    <%- include("./partials/footer") %>
+</body>
+<%- include("./partials/dashboardScript") %>
+
+</html>
+

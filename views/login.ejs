@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+    <%- include("./partials/loginStyle") %>
+</head>
+
+<body>
+  <div class="login-form">
+    <h1>Study-Mate<% if (locals.role && role==='admin') { %>
+      <%= "(admin)" %>
+    <% } %></h1>
+    <form action="/login" method="post">
+      <div class="content">
+        <% if (locals.error) { %>
+          <div class="alert alert-danger" role="alert">
+            <%= error %>
+          </div>
+        <% } %>
+        <div class="input-field">
+          <input type="text" placeholder="User-ID" name="userId" required>
+        </div>
+        <div class="input-field">
+          <input type="password" placeholder="Password" name="password" required>
+        </div>
+        <span>
+          <% if (locals.role && role==='admin') { %>
+            <span>
+              <input id="admin" type="radio" name="role" value="admin" checked="true" required>
+              <label for="admin">Admin</label>
+            </span>
+            <% } else { %>
+              <span>
+                <input id="student" type="radio" name="role" value="student" required>
+                <label for="student">Student</label>
+              </span>
+              <span>
+                <input id="faculty" type="radio" name="role" value="faculty" required>
+                <label for="faculty">Faculty</label><br>
+              </span>
+            <% } %>
+        </span>
+      </div>
+      <div class="action">
+        <button type="submit">Sign in</button>
+      </div>
+    </form>
+  </div>
+  
+</body>
+<%- include("./partials/loginScript") %>
+<%- include("./partials/script") %>
+</html>

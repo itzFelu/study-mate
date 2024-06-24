@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice: Study-Mate</title>
+    <%- include("./partials/noticeStyle") %>
+    <%- include("./partials/dashboardStyle") %>
+    <%- include("./partials/head") %>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+    <div class="main-section">
+        <!---------- Notice Board Section --------->
+        <div class="event">
+            <h2 id="heading">Notice Board</h2>
+            <% if (locals.user && user.subRole==="HOD") { %>
+                <b><a href="/user/newNotice" class="float-end" style="background-color: wheat; padding: 3px;">Post New Notice</a></b>
+            <% } %>
+            <div>
+                <marquee direction="up" scrollamount="13" style="height:400px;" onMouseOver="this.stop()" onMouseOut="this.start()" >
+                    <ul>
+                        <% if (locals.data) { %>
+                            <% if (data.length==0) { %>
+                                <div class="alert alert-danger" role="alert">
+                                    No Notice Available
+                                </div>
+                            <% } %>
+                            <% for( let i = data.length-1; i >=0 ; i-- ) { %>
+                                <a  href=<%=data[i].path %> target="_blank"><li><img src="/images/arrow.png"><%= `${data[i].title}(Dated:${data[i].date.toLocaleDateString('en-GB').replaceAll("/","-")})` %></li></a>
+                            <% } %>
+                        <% } %>
+                         
+                    </ul>
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <!---------- News, Event, Notice Board HTML Ends --------->
+    <%- include("./partials/footer") %>
+</body>
+<script>
+    document.querySelector("#heading")
+        .addEventListener('click',()=>{
+            window.location.href="/user/notice";
+        })
+</script>
+<%- include("./partials/dashboardScript") %>
+</html>

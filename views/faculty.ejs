@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faculty: Study-Mate</title>
+    <%- include("./partials/dashboardStyle") %>
+</head>
+
+<body>
+    <!-- <div class="top">
+        <div class="top-items dashboard"><button>dashboard</button></div>
+        <div class="top-items log"><button>logout</button></div>
+    </div> -->
+    <%- include("./partials/header") %>
+    
+    <div class="main">
+        <div class="cards" id="notice">
+            <img src="./images/sections.png" alt="img">
+            <p>Notices</p>
+        </div>
+
+        <div class="cards" id="attandanceSubmission">
+            <img src="./images/sections.png" alt="img">
+            <p>Attandace Submission</p>
+        </div>
+
+        <div class="cards" id="marksSubmission">
+            <img src="../../images/sections.png" alt="img">
+            <p>Marks Submission</p> 
+        </div>
+
+        <div class="cards" id="classroom">
+            <img src="../../images/sections.png" alt="img">
+            <p>Notes Warehouse</p>
+        </div>
+
+        <div class="cards" id="mentor">
+            <img src="../../images/sections.png" alt="">
+            <p>Mentor</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="heading">
+            <h2>STUDY-MATE by MCKV<sup>™</sup></h2>
+        </div>
+
+        <footer>
+            <hr>
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>Contact: info@mckvie.edu.in</p>
+                <p>Phone: (+91) 3326549315 / 17</p>
+            </div>
+            <div class="admission-details">
+                <h3>Admission Details</h3>
+
+                <p>Admission Office: MCKV INSTITUTE OF ENGINEERING 243 G. T. ROAD(NORTH), LILUAH, HOWRAH - 7712204</p>
+                <p>Email: admission@mckvie.edu.in</p>
+                <p>Phone: 9007017339</p>
+            </div>
+            <br>
+            © 2023 MCKVIE, All rights reserved.
+        </footer>
+    </div>
+</body>
+<script>
+    document.querySelector('#notice')
+        .addEventListener('click',()=>{
+            window.location.href = "/notice";
+        })
+    document.querySelector('#attandanceSubmission')
+        .addEventListener('click',()=>{
+            window.location.href = "/attandanceSubmission";
+        })
+    document.querySelector('#marksSubmission')
+        .addEventListener('click',()=>{
+            window.location.href = "/marksSubmission";
+        })
+    document.querySelector('#marks')
+        .addEventListener('click',()=>{
+            window.location.href = "/marks";
+        })
+    
+    document.querySelector('#classroom')
+            .addEventListener('click',()=>{
+                window.location.href = "/classroom";
+            })
+    document.querySelector('#mentor')
+            .addEventListener('click',()=>{
+                window.location.href = "/mentor";
+            })
+    document.querySelector('#eBook')
+        .addEventListener('click',()=>{
+            window.location.href = "/eBook";
+        })
+    
+    // header onclick events script
+    document.querySelector('.logo')
+        .addEventListener('click',()=>{
+            window.open('/', '_blank');
+        })
+    document.querySelector('.dashboard')
+        .addEventListener('click',()=>{
+            window.location.href="/dashboard";
+        })
+    document.querySelector('.log')
+        .addEventListener('click',()=>{
+            window.location.href="/login";
+        })
+    
+    
+       
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+<script>
+    // header onclick events script
+    document.querySelector('.logo')
+        .addEventListener('click', () => {
+            window.open('https://www.mckvie.edu.in/', '_blank');
+        })
+    document.querySelector('#dashboardHref')
+        .addEventListener('click', () => {
+            window.location.href = "/user/dashboard";
+        })
+    
+    document.querySelector('#home')
+        .addEventListener('click', () => {
+            window.location.href = "/user/dashboard";
+        })
+    
+    document.querySelector('#logout')
+        .addEventListener('click', () => {
+            window.location.href = '/user/logout';
+        })
+</script>

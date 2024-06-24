@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newNotice: STUDY-MATE</title>
+    <%- include("./partials/dashboardStyle") %>
+    <%- include("./partials/head") %>
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <h2 class="mx-4">Post New Notice</h2>
+    <% if (locals.message) { %>
+        <div class="alert alert-success" role="alert">
+            <%= message %>
+        </div>
+    <% } else if (locals.error) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+    <form class=" mx-5 container" action="/user/newNotice" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="noticeTitle" class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" id="noticeTitle" placeholder="put a title for the notice" required>
+          </div>
+          <div class="mb-3">
+            <label for="formFileLg" class="form-label">Attachment PDF</label>
+            <input class="form-control" name="attachment" id="formFileLg" type="file" required>
+          </div>
+          <button type="submit" class="mb-5 btn btn-primary">POST</button>
+    </form>
+    
+
+    <%- include("./partials/footer") %>
+</body>
+<%- include("./partials/dashboardScript") %>
+</html>

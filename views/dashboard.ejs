@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study-Mate</title>
+    <%- include("./partials/dashboardStyle") %>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+    
+    <div class="main">
+        <% if (locals.user && user.role==="faculty") { %>
+            <div class="cards" id="notice">
+                <img src="/images/clipboard-solid.svg" alt="img">
+                <p>Notices</p>
+            </div>
+    
+            <div class="cards" id="attandanceSubmission">
+                <img src="/images/calendar-check-solid.svg" alt="img">
+                <p>Attandace Submission</p>
+            </div>
+    
+            <div class="cards" id="marksSubmission">
+                <img src="/images/file-pen-solid.svg" alt="img">
+                <p>Marks Submission</p> 
+            </div>
+    
+            <div class="cards" id="notesWarehouse">
+                <img src="/images/note-sticky-solid.svg" alt="img">
+                <p>Notes Warehouse</p>
+            </div>
+    
+            <div class="cards" id="Mentorship">
+                <img src="/images/graduation-cap-solid.svg" alt="">
+                <p>Mentorship</p>
+            </div>
+            <% if (locals.user && user.subRole==="HOD") { %>
+                <div class="cards" id="hodActions" onclick="location.href='/user/hodActions'">
+                    <img src="/images/HOD.svg" alt="">
+                    <p>HOD Actions</p>
+                </div>
+            <% } %>
+        <% } else { %>
+            <div class="cards" id="notice">
+                <img src="/images/clipboard-solid.svg" alt="img">
+                <p>Notice</p>
+            </div>
+    
+            <div class="cards" id="uniDetails">
+                <img src="/images/building-columns-solid.svg" alt="img">
+                <p>University Details</p>
+            </div>
+    
+            <div class="cards" id="marks">
+                <img src="/images/file-pen-solid.svg" alt="img">
+                <p>Marks</p>
+            </div>
+    
+            <div class="cards" id="classroom">
+                <img src="/images/note-sticky-solid.svg" alt="img">
+                <p>Notes</p>
+            </div>
+    
+            <div class="cards" id="mentor">
+                <img src="/images/graduation-cap-solid.svg" alt="">
+                <p>Mentor</p>
+            </div>
+        <% } %>
+        <div class="cards" id="eBook">
+            <img src="/images/book-solid.svg" alt="">
+            <p>E-Book Center</p>
+        </div>
+    </div>
+    
+    <%- include("./partials/footer") %>
+</body>
+<%- include("./partials/dashboardScript") %>
+<% if (locals.user && user.role==="faculty") { %>
+    <%- include("./partials/dashboardSciptFaculty") %>
+<% } else { %>
+    <%- include("./partials/dashboardSciptStudent") %>
+<% } %>
+
+<script>
+    // body click events
+    document.querySelector('#notice')
+        .addEventListener('click', () => {
+            window.location.href = "/user/notice";
+        })
+    document.querySelector('#eBook')
+        .addEventListener('click', () => {
+            window.location.href = "/user/eBook";
+        })
+</script>
+</html>

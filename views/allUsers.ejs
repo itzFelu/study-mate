@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin: allUsers</title>
+    <%- include('./partials/head') %>
+    <%- include("./partials/dashboardStyle") %>
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <%- include('./partials/adminHeader') %>
+
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">CollegeId</th>
+            <th scope="col">DOB</th>
+            <th scope="col">E-Mail</th>
+            <th scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <% if (locals.data) { %>
+                <% let i=1 %>
+                <% data.forEach(element => { %>
+                    <tr>
+                        <th scope="row"><%= i++ %></th>
+                        <td><%= element.name %></td>
+                        <td><%= element.collegeId %></td>
+                        <td><%= element.dob.toLocaleDateString() %></td>
+                        <td><%= element.email %></td>
+                        <td><%= element.role %></td>
+                      </tr>
+                <% }) %>
+            <% } %>
+          
+          
+        </tbody>
+      </table>
+
+    <%- include("./partials/footer") %>
+</body>
+<%- include('./partials/adminScript') %>
+<%- include('./partials/script') %>
+</html>

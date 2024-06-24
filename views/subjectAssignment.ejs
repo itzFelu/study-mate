@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subjectAssignment: Study-Mate</title>
+    <%- include('./partials/head') %>
+    <%- include("./partials/dashboardStyle") %>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+    <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid justify-content-end">
+            <button class="btn btn-sm btn-outline-secondary  me-2" id="subAssignment" type="button" onclick="location.href='/user/hodActions/subjectAssignment' ">Assign Subject</button>
+            <button class="btn btn-outline-success me-2" id="subList" type="button" onclick="location.href='/user/hodActions/subjectList'">SubjectList</button>
+        </div>
+    </nav>
+    <h3 class="m-5" >Subject Details Creation and Faculty Assignment </h3>
+    <% if (locals.error) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+    <% if (locals.message) { %>
+        <div class="alert alert-success" role="alert">
+            <%= message%>
+        </div>
+    <% } %>
+    <form class="m-5" action="/user/hodActions/subjectAssignment" method="post">
+        <div class="mb-3">
+            <label for="role" class="form-label">Type Of Action: &emsp;</label>
+            <input class="form-check-input" type="radio" name="typeofaction" id="createNew" value="createNew"
+                required checked>
+            <label class="form-check-label mr-2" for="createNew">createNewSubject</label>
+            <input class="form-check-input" type="radio" name="typeofaction" id="update" value="update" >
+            <label class="form-check-label mr-2" for="update">update Existing One</label>
+        </div>
+        <div class="mb-3">
+            <label for="subCode" class="form-label">Subject Code</label>
+            <input type="text" class="form-control" id="subCode" name="subCode" required>
+        </div>
+        <div class="mb-3">
+            <label for="subName" class="form-label">Subject Name</label>
+            <input type="text" class="form-control" id="subName" name="subName" required>
+        </div>
+        <div class="mb-3">
+            <label for="subFaculty" class="form-label">Subject faculty Id</label>
+            <input type="text" class="form-control" id="subFaculty" name="subFaculty" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <%- include("./partials/footer") %>
+</body>
+<%- include("./partials/dashboardScript") %>
+
+</html>

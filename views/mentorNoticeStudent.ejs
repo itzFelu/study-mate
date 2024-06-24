@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Notice: Study-Mate</title>
+    <%- include("./partials/noticeStyle") %>
+    <%- include("./partials/dashboardStyle") %>
+    <%- include("./partials/head") %>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+    <h3 class="ms-5" id="titleMentor" 
+    onMouseOver="this.style.cursor='pointer'"
+    onMouseOut="this.style.cursor='arrow'"
+    ><u>Mentor Section</u></h3>
+
+    <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid justify-content-end">
+            <button class="btn btn-outline-success me-2" id="sendQuery" type="button">Send Query</button>
+            <button class="btn btn-outline-success me-2" id="mentorNotice" type="button">MentorNotice</button>
+        </div>
+    </nav>
+
+    <div class="main-section">
+        <!---------- Notice Board Section --------->
+        <div class="event">
+            <h2 id="heading">Mentor Notice Board</h2>
+            <div>
+                <marquee direction="up" scrollamount="13" style="height:400px;" onMouseOver="this.stop()" onMouseOut="this.start()" >
+                    <ul>
+                        <% if (locals.data) { %>
+                            <% if (data.length==0) { %>
+                                <div class="alert alert-danger" role="alert">
+                                    No Notice Available
+                                </div>
+                            <% } %>
+                            <% for( let i = data.length-1; i >=0 ; i-- ) { %>
+                                <a  href=<%=data[i].path %> target="_blank"><li><img src="/images/arrow.png"><%= `${data[i].title}(Dated:${data[i].date.toLocaleDateString('en-GB').replaceAll("/","-")})` %></li></a>
+                            <% } %>
+                        <% } %>
+                         
+                    </ul>
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <!---------- News, Event, Notice Board HTML Ends --------->
+    <%- include("./partials/footer") %>
+</body>
+<script>
+    document.querySelector("#titleMentor")
+        .addEventListener('click',()=>{
+            window.location.href='/user/mentor';
+        })
+    document.querySelector("#mentorNotice")
+        .addEventListener('click',()=>{
+            window.location.href='/user/mentor/mentorNoticeStudent';
+        })
+    document.querySelector("#sendQuery")
+        .addEventListener('click',()=>{
+            window.location.href='/user/mentor';
+        })
+    
+</script>
+<%- include("./partials/dashboardScript") %>
+</html>

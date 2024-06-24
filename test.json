@@ -1,0 +1,30 @@
+{ "title" : "marks model structure" },
+
+
+{
+    "studentId" : {
+        
+    },
+    "semester": {
+        "type":"String",
+        "enum": ["first","second","third","fourth","fifth","sixth","seventh","eighth"],
+    },
+    "students":{
+        "type": "Array of student ids, who are currently enrolled in the class",
+    },
+    "Subjects":{
+        [
+            {
+                "subjectName":{"type string"},
+                "facultyId":{"type (objectId) refering user collection"},
+                "marks": {
+                    "CA1": {"type": "Number"},
+                    "CA2": {"type": "Number"},
+                    "CA3": {"type": "Number"},
+                    "CA4": {"type": "Number"},
+                }
+            }
+        ]
+    }
+}
+// Classroom and Marks Schema

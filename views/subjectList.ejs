@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subList: Study-Mate</title>
+    <%- include('./partials/head') %>
+    <%- include("./partials/dashboardStyle") %>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+    <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid justify-content-end">
+            <button class="btn btn-sm btn-outline-secondary  me-2" id="subAssignment" type="button" onclick="location.href='/user/hodActions/subjectAssignment' ">subAssignment</button>
+            <button class="btn btn-outline-success me-2" id="subList" type="button" onclick="location.href='/user/hodActions/subjectList'">SubjectList</button>
+        </div>
+    </nav>
+    <h3 class="m-5 ">Subject List</h3>
+    <% if (locals.error) { %>
+        <div class="alert alert-danger" role="alert">
+          <%= error %>
+        </div>
+      <% } %>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Subject Name</th>
+            <th scope="col">Subject Code</th>
+            <th scope="col">Subject Faculty Id</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <% if (locals.data) { %>
+                <% let i=1 %>
+                <% data.forEach(element => { %>
+                    <tr>
+                        <th scope="row"><%= i++ %></th>
+                        <td><%= element.subName %></td>
+                        <td><%= element.subCode %></td>
+                        <td><%= element.subFaculty %></td>
+                      </tr>
+                <% }) %>
+            <% } %>
+          
+          
+        </tbody>
+      </table>
+
+
+    <%- include("./partials/footer") %>
+</body>
+<%- include("./partials/dashboardScript") %>
+
+</html>

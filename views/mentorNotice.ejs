@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mentorNotice: STUDY-MATE</title>
+    <%- include("./partials/dashboardStyle") %>
+    <%- include("./partials/head") %>
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <h2 class="mx-4">Post New Notice</h2>
+    
+    <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid justify-content-end">
+          <button class="btn btn-outline-success me-2" id="mentorship" type="button">Queries</button>
+          <button class="btn btn-sm btn-outline-secondary  me-2" id="StudentList" type="button">StudentList</button>
+          <button class="btn btn-outline-success me-2" id="putupNotice" type="button">Put up a Notice</button>
+        </div>
+    </nav>
+
+    <% if (locals.message) { %>
+        <div class="alert alert-success" role="alert">
+            <%= message %>
+        </div>
+    <% } else if (locals.error) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+    <form class=" mx-5 container" action="/user/mentorship/putupnotice" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="noticeTitle" class="form-label">Notice Title</label>
+            <input type="text" name="title" class="form-control" id="noticeTitle" placeholder="put a title for the notice" required>
+          </div>
+          <div class="mb-3">
+            <label for="formFileLg" class="form-label">Attachment File</label>
+            <input class="form-control" name="attachment" id="formFileLg" type="file" required>
+          </div>
+          <button type="submit" class="mb-5 btn btn-primary">POST</button>
+    </form>
+    
+
+    <%- include("./partials/footer") %>
+</body>
+<%- include("./partials/dashboardScript") %>
+<% if (locals.user && user.role==="faculty") { %>
+    <%- include("./partials/dashboardSciptFaculty") %>
+<% } else { %>
+    <%- include("./partials/dashboardSciptStudent") %>
+<% } %>
+<script>
+    document.querySelector('#StudentList')
+        .addEventListener('click', () => {
+            window.location.href = "/user/mentorship/studentlist";
+        })
+    document.querySelector("#putupNotice")
+        .addEventListener('click',()=>{
+            window.location.href="/user/mentorship/putupnotice";
+    })
+    document.querySelector("#mentorship")
+        .addEventListener('click',()=>{
+            window.location.href="/user/mentorship";
+    })
+</script>
+</html>

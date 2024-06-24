@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin: user Register</title>
+  <%- include('./partials/head') %>
+  <%- include("./partials/dashboardStyle") %>
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <%- include('./partials/adminHeader') %>
+  <h1 class="m-5"> Register new User</h1>
+  <form class="m-5" action="/admin/user" method="post">
+    <% if (locals.message) { %>
+      <div class="alert alert-success" role="alert">
+        <%= message %>
+      </div>
+    <% } %>
+    <% if (locals.err) { %>
+      <div class="alert alert-danger" role="alert">
+        <%= err %>
+      </div>
+    <% } %>
+    <div class="mb-3" >
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">College Id</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="collegeId" required>
+    </div>
+    <div class="mb-3  mb-5">
+      <label for="role" class="form-label">Gender</label>
+      <div class="" >
+        <input class="form-check-input" type="radio" name="gender" id="male" value="male"  required>
+        <label class="form-check-label mr-2" for="male">Male</label>
+        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+        <label class="form-check-label mr-2" for="female">Female</label>
+        <input class="form-check-input" type="radio" name="gender" id="others" value="others">
+        <label class="form-check-label" for="others">Others</label>
+      </div>
+    </div>
+    <label for="dob">Date of Birth: </label>
+    <div class="form-check mb-5" >
+      <input class="mt-2" type="date" id="dob" name="dob" required>
+    </div>
+    <div class="mb-3">
+      <label for="role" class="form-label">Role</label>
+      <div class="form-check" >
+        <input class="form-check-input" type="radio" name="role" id="student" value="student"  required>
+        <label class="form-check-label" for="student">Student</label>
+      </div>
+      <div class="form-check mb-5" >
+        <input class="form-check-input" type="radio" name="role" id="faculty" value="faculty">
+        <label class="form-check-label" for="faculty">Faculty</label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="subRole" class="form-label">Sub-Role</label>
+      <div class="form-check" >
+        <input class="form-check-input" type="radio" name="subRole" id="hod" value="HOD"  required>
+        <label class="form-check-label" for="hod">HOD</label>
+      </div>
+      <div class="form-check" >
+        <input class="form-check-input" type="radio" name="subRole" id="tic" value="TIC">
+        <label class="form-check-label" for="tic">TIC</label>
+      </div>
+      <div class="form-check mb-5" >
+        <input class="form-check-input" type="radio" name="subRole" id="na" value="NA" checked>
+        <label class="form-check-label" for="na">NA</label>
+      </div>
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <%- include("./partials/footer") %>
+</body>
+<%- include('./partials/adminScript') %>
+<%- include('./partials/script') %>
+
+</html>
