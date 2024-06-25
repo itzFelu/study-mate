@@ -1,9 +1,9 @@
 // import {v2 as cloudinary} from 'cloudinary';
 const cloudinary=require('cloudinary').v2;
 cloudinary.config({ 
-  cloud_name: 'dohfzn1iw', 
-  api_key: '398737747243348', 
-  api_secret: 'bgzKswwNKEE_JPyBKZM0sR5f9o4' 
+  cloud_name: 'confidential', 
+  api_key: 'confidential', 
+  api_secret: 'confidential' 
 });
 async function uploadFile(filepath){
   try {

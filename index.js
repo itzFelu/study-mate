@@ -7,7 +7,7 @@ const {checkForAuthenticationCookie, printUrl}=require('./middlewares/authentica
 const userRouter=require('./routes/user');
 const adminRouter=require('./routes/admin');
 const homeRouter=require('./routes/home');
-const connectionString=`mongodb+srv://phelusukanta11:kZcvSyaayZIfcalC@collegeDb.7ku31tq.mongodb.net/?retryWrites=true&w=majority&appName=collegeDb`
+const connectionString=`confidential`
 mongoose.connect(connectionString)
     .then((err)=>{
         console.log("mongoDb connected");
